@@ -251,12 +251,12 @@ class SHT4x:
 def read_sht31_temperature():
     i2c = board.I2C()  # uses board.SCL and board.SDA   
     sht = SHT4x(i2c)
-    print("Found SHT4x with serial number", hex(sht.serial_number))
+    # print("Found SHT4x with serial number", hex(sht.serial_number))
 
     sht.mode = Mode.NOHEAT_HIGHPRECISION
     # Can also set the mode to enable heater
     # sht.mode = adafruit_sht4x.Mode.LOWHEAT_100MS
-    print("Current mode is: ", Mode.string[sht.mode])
+    # print("Current mode is: ", Mode.string[sht.mode])
     cTemp = sht.temperature
     
     return (cTemp)
